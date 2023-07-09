@@ -113,9 +113,9 @@ app.post("/add-recipe", (req, res) => {
 });
 
 ///deployment part///
-app.use(express.static(path.join(__dirname,'../public/build')));
+app.use(express.static(path.join(__dirname,'./build')));
 app.get('*',function(req,res){
-  res.sendFile(path.join(__dirname,'../public/build/index.html'));
+  res.sendFile(path.join(__dirname,'./build/index.html'));
 });
 ///till here///
 // const buildPath=path.join(__dirname, '..', 'build');
